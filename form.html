@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Data</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+   
+    
+</head>
+<body>
+  
+    <div class="flex-page">
+        <img src="assets/tamilnadulogo.png" class="im">
+        <h1>Tamil Nadu Cleanliness Workers Welfare Board</h1>
+        <img src="assets/logo.png" class="im">
+    </div>
+    <div style="background-color: rgb(9, 6, 112);color: white;height: 50px;">
+        <h3 style="text-align: center;padding: 10px">Tamilnadu Cleanliness SCHEME Portal / தமிழ்நாடு தூய்aமைத் திட்ட ãபோர்டல</h3>
+      
+
+    </div>
+   
+
+   <!-- Parent container aligned to the right -->
+<div style="display: flex; justify-content: flex-end; padding: 10px; background-color: #fff;">
+  <div style="display: flex; align-items: center; font-family: Arial, sans-serif;">
+   
+    <img src="assets/printer.png" class="printer" style="height: 25px; width: 25px; border: 1px solid #ccc; padding: 5px;"  onclick="captureScreenshot()">
+
+
+    <div style="font-size: 16px; font-weight: bold; color: #004080; padding: 5px 10px;">
+      <span id="date">15/04/2025</span>
+    </div>
+
+
+    <div style="font-size: 16px; font-weight: bold; color: #004080; border: 1px solid #000; padding: 5px 10px;">
+      <span id="time">04:35 AM</span>
+    </div>
+  </div>
+</div>
+  <div style="background-color: #E5FFFE; border: 1px solid gray; width: 90%; padding: 20px; margin: 30px; border-radius: 10px;">
+  <h4 style="text-align: center; margin-bottom: 20px;">
+    Organization Information / அமைப்பு தகவல்
+  </h4>
+
+  <form id="form1" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div>
+      <label>Type of Work / வேலை வகை</label><br>
+      <input type="text" name="work_"  placeholder="Core Sanitary Workers" required  style="width: 100%;">
+    </div>
+    
+    <div>
+      <label >Zone / மண்டலம்</label><br>
+      <input type="text" name="zone" required placeholder="Zone 1" style="width: 100%;">
+    </div>
+
+    <div>
+      <label>Organization Type / அமைப்பு வகை</label><br>
+      <input type="text" name="Organization_type" required placeholder="Government" style="width: 100%;">
+    </div>
+
+    <div>
+      <label>District Name / மாவட்டத்தின் பெயர்</label><br>
+      <input type="text" name="District" placeholder="Chennai" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Name of the Local Body / உள்ளாட்சி அமைப்பின் பெயர்</label><br>
+      <input type="text" name="Local_Body" placeholder="Corporation" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Type of Core Sanitary Workers / முக்கிய சுகாதார பணியாளர்களின் வகை</label><br>
+      <input type="text" name="Typeof_Core_Sanitary" placeholder="Toilet Cleaning" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Nature of Job / வேலையின் இயல்பு</label><br>
+      <input type="text" name="NatureOf_Job" placeholder="Daily Wage" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Local Body / உள்ளாட்சி அமைப்பு</label><br>
+      <input type="text" name="Local_Body_last" placeholder="Rural" style="width: 100%;" required>
+    </div>
+    <div style="grid-column: span 2; text-align: center;">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+ 
+</div>
+<div class="member-data" style="background-color: #E5FFFE; border: 1px solid gray; width: 90%; padding: 20px; margin: 30px; border-radius: 10px;">
+  <h4 style="text-align: center; margin-bottom: 20px;">
+    Member Personal Details / உறுப்பினர் தனிப்பட்ட விவரங்கள்
+
+  </h4>
+     <div style="display: inline;">
+      <img src="assets/personlogo.png" id="ppic" style="height: 100px; border-radius: 50%;">
+      <label for="file-1" style="cursor: pointer;">Upload image</label>
+      <input type="file" style="display: none;" accept="image/jpeg, image/png, image/jpg" id="file-1" required>
+     </div>
+  <form id="form2" class="validate-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 50px;">
+     <div>
+      <label>First Name / முதல் பெயர</label><br>
+      <input type="text" name="firstname" placeholder="Mala" style="width: 100%;"  required>
+    </div>
+    <div>
+      <label>Last Name / கsடைசி பெயர் </label><br>
+      <input type="text" name="lastname" placeholder="m" style="width: 100%;" required>
+    </div>
+    
+    <div>
+      <label >Father (or) Husband Name /தந்sதை (அ) கணவர் பெயர</label><br>
+      <input type="text" name="gardion" placeholder="Zone 1" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Date Of Birth / பிறந்த vதேதி
+
+(If you don t know the beneficiary s birth date and month, you can select
+January 1st of your birth year)/ (பயனாளியின் பிறந்த vதேதி மற்றும் மாதம்
+உங்களுக்குத் தெரியாவிட்டால், உங்கள் பிறந்த ஆண்டின் ஜனவரி 1 ஆம்
+vதேதிsயைத் vதேர்ந்தெடுக்கலாம்)* </label><br>
+      <input type="date" name="dob" placeholder="02/06/1995" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Health Id </label><br>
+      <input type="text" name="health_id" placeholder="Chennai" style="width: 100%;" class="num" required>
+    </div>
+
+    <div>
+      <label>Marital Status / திருமண நிsல</label><br>
+      <input type="text" name="Status_" placeholder="married" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Education / கல்வி </label><br>
+      <input type="text" name="Education" placeholder="11th & 12th standards" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Phone Number / தொsலைvபேசி எண் </label><br>
+      <input type="text" name="Phone_Number" placeholder="1234567890" class="num" style="width: 100%;" required>
+    </div>
+
+    <div>
+      <label>Ration Card No / குடும்ப அட்sடை எண்  </label><br>
+      <input type="text" name="Ration_No" placeholder="1234567890" style="width: 100%;" required>
+    </div>
+    <div>
+      <label>Aadhaar Number / ஆதார் எண்   </label><br>
+      <input type="text" name="Aadhar_No" placeholder="1234567890" class="num" style="width: 100%;" required>
+    </div>
+     <div>
+      <label>Community / சமூகம   </label><br>
+      <input type="text" name="Community"  placeholder="bc" style="width: 100%;" required>
+    </div>
+    <div style="grid-column: span 2; text-align: center;">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+    <div class="address" style="background-color: #E5FFFE; border: 1px solid gray; width: 90%; padding: 20px; margin: 30px; border-radius: 10px;">
+      <h4 style="text-align: center; margin-bottom: 20px;">
+      Permanent Address / நிaலையான முகவரி
+      </h4>
+
+      <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div>
+          <label>Door No / கதவு எண</label><br>
+          <input type="text" placeholder="12" style="width: 100%;" id="door" required>
+        </div>
+        
+        <div>
+          <label >Street Name / தெரு பெயர் </label><br>
+          <input type="text" placeholder="anna nagar" style="width: 100%;" id="Street" required>
+        </div>
+
+        <div>
+          <label>Village/Area/City / (கிராமம்/பகுதி/நகரம்) </label><br>
+          <input type="text" placeholder="perungalathur" style="width: 100%;" id="Village" required>
+        </div>
+
+        <div>
+          <label>District Name / மாவட்டத்தின் பெயர்</label><br>
+          <input type="text" placeholder="Chennai" style="width: 100%;"id="dist" required>
+        </div>
+
+        <div>
+          <label>Taluk Name / தாலுகா பெயர</label><br>
+          <input type="text" placeholder="Corporation" style="width: 100%;" id="mettupalayam" required>
+        </div>
+
+        <div>
+          <label>Pincode</label><br>
+          <input type="text" placeholder="Toilet Cleaning" style="width: 100%;" id="pin"required >
+        </div>
+      </form>
+    </div>
+
+    <div>
+
+    </div>
+    <input type="checkbox" id="copyAddress"> Permanent Address same as Temporary Address? / நிலையான முகவரியும் தற்காலிக முகவரியும் ஒன்றா? 
+
+    <div id="show" style="margin-top: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 10px;"></div>
+
+    <div class="address" style="background-color: #E5FFFE; border: 1px solid gray; width: 90%; padding: 20px; margin: 30px auto; border-radius: 10px;">
+        <h4 style="text-align: center;">Family Members Details / குடும்ப உறுப்பினர்களின் விவரங்கள்</h4>
+        <table border=0 cellspacing="5" cellpadding="5" style="width: 90%; border-collapse: collapse;">
+            <thead style="background-color: #b7b8b8;">
+                <tr>
+                    <th>Name</th>
+                    <th>Relationship</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Education</th>
+                    <th>Education Details</th>
+                    <th>Occupation</th>
+                    <th>Differently Abled</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> 
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;"required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;"required></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                    <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                </tr>
+                <tr>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+                <td><input type="text" placeholder="suresh" style="height: 30px; border: none;" required></td>
+            </tr>
+        </tbody>
+    </table>
+    <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <label>If your family member is already a member of CWWB, Please mention the Registration
+Number / உங்கள் குடும்ப உறுப்பினர் ஏற்கனvவே CWWB இல் உறுப்பினராக இருந்தால்,
+பதிவு எண்sணைக் குறிப்பிடவும</label><br>
+      <input type="text"  style="width: 100%;" id="mettupalayam">
+    </form>
+    </div>
+
+    
+
+</div>
+
+ <div class="address" style="background-color: #E5FFFE; border: 1px solid gray; width: 90%; padding: 20px; margin: 30px; border-radius: 10px;">
+  <h4 style="text-align: center; margin-bottom: 20px;">
+   Member bank Account Details / உறுப்பினர் வங்கி கணக்கு விவரங்கள
+  </h4>
+
+  <form style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div>
+      <label>IFSC Code / IFSC குறியீட</label><br>
+      <input type="text" placeholder="CIUB0000261" style="width: 100%;" id="door" required>
+    </div>
+    
+    <div>
+      <label >Name of the Bank / வங்கியின் பெயர</label><br>
+      <input type="text" placeholder="IOB" style="width: 100%;" id="Street" required >
+    </div>
+
+    <div>
+      <label>Branch Name / கிsளையின் பெயர </label><br>
+      <input type="text" placeholder="PERAMBUR" style="width: 100%;" id="Village" required>
+    </div>
+
+    <div>
+      <label>Account Holder Name / கணக்கு sவைத்திருப்பவரின் பெயர</label><br>
+      <input type="text" placeholder="SIVA M" style="width: 100%;"id="dist" required>
+    </div>
+
+    <div>
+      <label>Account Number / கணக்கு எண</label><br>
+      <input type="text" placeholder="11500100063029" style="width: 100%;" id="mettupalayam" required>
+    </div>
+
+    <div>
+      <label>Pincode</label><br>
+      <input type="text" placeholder="Toilet Cleaning" style="width: 100%;" id="pin" required>
+    </div>
+  </form>
+</div>
+ 
+<div class="address" style="background-color: #E5FFFE; border: 1px solid gray; width: 90%; padding: 20px; margin: 30px; border-radius: 10px;">
+  <h4 style="text-align: center;">Document Details</h4>
+  <form style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+    
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <label style="margin-bottom: 10px;">Upload Aadhaar Card / 
+
+ஆதார் அட்sடைsயை பதிvவேற்றவும். </label>
+      <input type="file"  id="jj" accept="image/*" onchange="previewFile(event, 0)" required>
+      <div class="file-preview" 
+           style="height: 150px; width: 150px; border: 1px solid black; background-color: white; display: flex; justify-content: center; align-items: center; overflow: hidden;"
+           ondragover="dragOverHandler(event)" 
+           ondragleave="dragLeaveHandler(event)" 
+           ondrop="dropHandler(event, 0)">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <label style="margin-bottom: 10px;">Upload Organization Proof / ID /
+
+ (நிறுவனச் சான்று பதிvவேற்றவும்)</label>
+      <input type="file"  id="jj"  accept="image/*" onchange="previewFile(event, 1)" required>
+      <div class="file-preview" 
+           style="height: 150px; width: 150px; border: 1px solid black; background-color: white; display: flex; justify-content: center; align-items: center; overflow: hidden;"
+           ondragover="dragOverHandler(event)" 
+           ondragleave="dragLeaveHandler(event)" 
+           ondrop="dropHandler(event, 1)">
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <label style="margin-bottom: 10px;">Upload First Page Of Bank Pass Book /
+
+வங்கி பாஸ் புத்தகத்தின் முதல் பக்கத்sதை பதிvவேற்றவும்.</label>
+      <input type="file" accept="image/*"  id="jj"  onchange="previewFile(event, 2)" required>
+      <div class="file-preview" 
+           style="height: 150px; width: 150px; border: 1px solid black; background-color: white; display: flex; justify-content: center; align-items: center; overflow: hidden;"
+           ondragover="dragOverHandler(event)" 
+           ondragleave="dragLeaveHandler(event)" 
+           ondrop="dropHandler(event, 2)">
+      </div>
+    </div>
+
+  </form>
+</div>
+<div style="text-align: center;">
+  <button style="height: 50px; width: 150px; border-radius: 50px;font-weight: bold;font-size: 20px; background-color: #004080;color: white;">
+    Back
+  </button>
+
+  <button style="height: 50px; width: 150px; border-radius: 50px;font-weight: bold;font-size: 20px; background-color: #004080;color: white;" onclick="checkInputs()">Save</button>
+</div>
+
+
+<script src="javaScript.js"></script>
+    
+</body>
+</html>

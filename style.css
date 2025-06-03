@@ -1,0 +1,12 @@
+body{
+    margin: 25px;
+}
+.flex-page{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.im{
+    height: 100px;
+    width: 100px;
+}

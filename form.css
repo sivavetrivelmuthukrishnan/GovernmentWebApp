@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.flex {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.im {
+  height: 60px;
+  width: 60px;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+  flex: 1 0 100%;
+  margin: 10px 0;
+}
+
+form {
+  width: 100%;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="file"],
+form input[type="submit"],
+form select {
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+form label {
+    color:  #003366;
+}
+
+form input[type="submit"] {
+  background-color: #004080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+
+}
+
+form input[type="submit"]:hover {
+  background-color: #003366;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form > div {
+    width: 100%;
+  }
+
+  table {
+    font-size: 12px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  .address,
+  .member-data,
+  form {
+    width: 95% !important;
+    margin: 10px auto !important;
+  }
+}
+
+#jj{
+    width: 150px;
+    border: none;
+
+}
+.printer{
+    cursor: pointer;
+}
